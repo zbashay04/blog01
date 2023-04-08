@@ -24,7 +24,6 @@ class ArticlesController < ApplicationController
   def edit
     @article = Article.find(params[:id])
   end
-  
 
   def update
     @article = Article.find(params[:id])
@@ -36,9 +35,9 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def destroy
+  def delete
     @article = Article.find(params[:id])
-    @article.destroy
+    @article.delete
 
     redirect_to root_path, status: :see_other
   end
